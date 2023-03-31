@@ -43,12 +43,11 @@ class Menu
 
     private void AssignData()
     {
-        var filteredSoldiers = from soldier in _soldiers
-                               select new
-                               {
-                                   fullName = soldier.FullName,
-                                   rank = soldier.Rank
-                               };
+        var filteredSoldiers = from soldier in _soldiers select new
+        {
+            fullName = soldier.FullName,
+            rank = soldier.Rank
+        };
 
         foreach (var soldier in filteredSoldiers)
         {
