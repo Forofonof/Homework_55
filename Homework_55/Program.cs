@@ -45,13 +45,13 @@ class Menu
     {
         var filteredSoldiers = from soldier in _soldiers select new
         {
-            fullName = soldier.FullName,
-            rank = soldier.Rank
+            soldier.FullName,
+            soldier.Rank
         };
 
         foreach (var soldier in filteredSoldiers)
         {
-            Console.WriteLine($"Имя солдата - {soldier.fullName} | Звание - {soldier.rank}.");
+            Console.WriteLine($"Имя солдата - {soldier.FullName} | Звание - {soldier.Rank}.");
         }
     }
 }
@@ -83,11 +83,8 @@ class Soldier
     }
 
     public string FullName { get; private set; }
-
     public string Rank { get; private set; }
-
     public string Weapons { get; private set; }
-
     public int WorkExperienceInMonths { get; private set; }
 
     public void ShowInfo()
